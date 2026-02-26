@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_users_form_awtad_parking" model="ir.ui.view">
+        <field name="name">res.users.form.awtad.parking</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="maj_client_id" groups="majodoul_parking_access.group_awtad_parking_admin"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_maj_unit_tree" model="ir.ui.view">
+        <field name="name">maj.unit.tree</field>
+        <field name="model">maj.unit</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="floor_number"/>
+                <field name="max_parking_slots"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_maj_unit_form" model="ir.ui.view">
+        <field name="name">maj.unit.form</field>
+        <field name="model">maj.unit</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="floor_number"/>
+                        <field name="max_parking_slots"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_maj_unit" model="ir.actions.act_window">
+        <field name="name">Units / Floors</field>
+        <field name="res_model">maj.unit</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

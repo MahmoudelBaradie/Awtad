@@ -1,0 +1,15 @@
+<odoo>
+    <record id="seq_maj_access_card" model="ir.sequence">
+        <field name="name">Access Card</field>
+        <field name="code">maj.access.card</field>
+        <field name="prefix">ACSCD</field>
+        <field name="padding">5</field>
+    </record>
+
+    <record id="seq_maj_parking" model="ir.sequence">
+        <field name="name">Parking Permit</field>
+        <field name="code">maj.parking</field>
+        <field name="prefix">PARK</field>
+        <field name="padding">5</field>
+    </record>
+</odoo>

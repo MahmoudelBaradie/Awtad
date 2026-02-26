@@ -1,0 +1,48 @@
+<odoo>
+    <record id="view_maj_access_card_graph" model="ir.ui.view">
+        <field name="name">maj.access.card.graph</field>
+        <field name="model">maj.access.card</field>
+        <field name="arch" type="xml">
+            <graph string="Active Access Cards by Client" type="bar">
+                <field name="client_id" type="row"/>
+                <field name="id" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_maj_access_card_pivot" model="ir.ui.view">
+        <field name="name">maj.access.card.pivot</field>
+        <field name="model">maj.access.card</field>
+        <field name="arch" type="xml">
+            <pivot string="Access Cards Analysis">
+                <field name="client_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="id" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_maj_parking_graph" model="ir.ui.view">
+        <field name="name">maj.parking.graph</field>
+        <field name="model">maj.parking</field>
+        <field name="arch" type="xml">
+            <graph string="Parking Usage by Unit" type="bar">
+                <field name="unit_id" type="row"/>
+                <field name="id" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_maj_parking_pivot" model="ir.ui.view">
+        <field name="name">maj.parking.pivot</field>
+        <field name="model">maj.parking</field>
+        <field name="arch" type="xml">
+            <pivot string="Parking Linked to Access Cards">
+                <field name="unit_id" type="row"/>
+                <field name="client_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="id" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+</odoo>

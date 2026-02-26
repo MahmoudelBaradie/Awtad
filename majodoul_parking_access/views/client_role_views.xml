@@ -1,0 +1,71 @@
+<odoo>
+    <record id="view_maj_client_role_tree" model="ir.ui.view">
+        <field name="name">maj.client.role.tree</field>
+        <field name="model">maj.client.role</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_maj_client_role_form" model="ir.ui.view">
+        <field name="name">maj.client.role.form</field>
+        <field name="model">maj.client.role</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_maj_client_role" model="ir.actions.act_window">
+        <field name="name">Roles</field>
+        <field name="res_model">maj.client.role</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_maj_client_role_assignment_tree" model="ir.ui.view">
+        <field name="name">maj.client.role.assignment.tree</field>
+        <field name="model">maj.client.role.assignment</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="client_id"/>
+                <field name="role_id"/>
+                <field name="responsible_name"/>
+                <field name="responsible_email"/>
+                <field name="responsible_mobile"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_maj_client_role_assignment_form" model="ir.ui.view">
+        <field name="name">maj.client.role.assignment.form</field>
+        <field name="model">maj.client.role.assignment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="client_id"/>
+                        <field name="role_id"/>
+                        <field name="responsible_name"/>
+                        <field name="responsible_email"/>
+                        <field name="responsible_mobile"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_maj_client_role_assignment" model="ir.actions.act_window">
+        <field name="name">Role Assignments</field>
+        <field name="res_model">maj.client.role.assignment</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

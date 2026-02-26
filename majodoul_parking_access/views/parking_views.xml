@@ -1,0 +1,86 @@
+<odoo>
+    <record id="view_maj_parking_tree" model="ir.ui.view">
+        <field name="name">maj.parking.tree</field>
+        <field name="model">maj.parking</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="access_card_id"/>
+                <field name="client_id"/>
+                <field name="unit_id"/>
+                <field name="car_plate_en"/>
+                <field name="parking_type"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_maj_parking_search" model="ir.ui.view">
+        <field name="name">maj.parking.search</field>
+        <field name="model">maj.parking</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="unit_id"/>
+                <field name="access_card_id"/>
+                <filter string="Active" name="active_parking" domain="[('state','=','active')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Unit" name="group_unit" context="{'group_by':'unit_id'}"/>
+                    <filter string="Client" name="group_client" context="{'group_by':'client_id'}"/>
+                    <filter string="State" name="group_state" context="{'group_by':'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_maj_parking_form" model="ir.ui.view">
+        <field name="name">maj.parking.form</field>
+        <field name="model">maj.parking</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_set_active" string="Activate" type="object" invisible="state != 'draft'"/>
+                    <button name="action_set_expired" string="Expire" type="object" invisible="state not in ('draft','active')"/>
+                    <button name="action_set_cancelled" string="Cancel" type="object" invisible="state == 'cancelled'"/>
+                    <button name="action_reset_draft" string="Reset Draft" type="object" invisible="state != 'cancelled'"/>
+                    <button name="action_check_in" string="Check In" type="object" groups="majodoul_parking_access.group_awtad_security_role,majodoul_parking_access.group_awtad_parking_admin"/>
+                    <button name="action_check_out" string="Check Out" type="object" groups="majodoul_parking_access.group_awtad_security_role,majodoul_parking_access.group_awtad_parking_admin"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,active,expired,cancelled"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" readonly="1"/>
+                            <field name="access_card_id"/>
+                            <field name="client_id" readonly="1"/>
+                            <field name="unit_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="parking_type"/>
+                            <field name="time_in"/>
+                            <field name="time_out"/>
+                        </group>
+                    </group>
+                    <group string="Vehicle Info" col="3">
+                        <field name="car_plate_en"/>
+                        <field name="car_plate_ar"/>
+                        <field name="tag_number"/>
+                        <field name="car_color"/>
+                        <field name="car_model"/>
+                        <field name="car_type"/>
+                        <field name="vehicle_brand"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_maj_parking" model="ir.actions.act_window">
+        <field name="name">Parking Permits</field>
+        <field name="res_model">maj.parking</field>
+        <field name="view_mode">list,form,graph,pivot</field>
+        <field name="search_view_id" ref="view_maj_parking_search"/>
+    </record>
+</odoo>
