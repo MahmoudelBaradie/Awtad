@@ -1,0 +1,16 @@
+<odoo>
+    <menuitem id="menu_maj_root" name="AWTAD PARKING" sequence="10"/>
+
+    <menuitem id="menu_maj_operations" name="Operations" parent="menu_maj_root" sequence="10"/>
+    <menuitem id="menu_maj_access_card" name="Access Cards" parent="menu_maj_operations" action="action_maj_access_card" sequence="10"/>
+    <menuitem id="menu_maj_parking" name="Parking Permits" parent="menu_maj_operations" action="action_maj_parking" sequence="20"/>
+
+    <menuitem id="menu_maj_master" name="Master Data" parent="menu_maj_root" sequence="20"/>
+    <menuitem id="menu_maj_client" name="Clients" parent="menu_maj_master" action="action_maj_client" sequence="10"/>
+    <menuitem id="menu_maj_unit" name="Units / Floors" parent="menu_maj_master" action="action_maj_unit" sequence="20"/>
+    <menuitem id="menu_maj_role" name="Roles" parent="menu_maj_master" action="action_maj_client_role" sequence="30"/>
+    <menuitem id="menu_maj_role_assignment" name="Role Assignments" parent="menu_maj_master" action="action_maj_client_role_assignment" sequence="40"/>
+
+    <menuitem id="menu_maj_reporting" name="Reporting" parent="menu_maj_root" sequence="30"/>
+    <menuitem id="menu_maj_state_log" name="State Audit Log" parent="menu_maj_reporting" action="action_maj_state_log" sequence="10"/>
+</odoo>

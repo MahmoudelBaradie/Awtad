@@ -1,0 +1,20 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_maj_client_admin,maj.client admin,model_maj_client,majodoul_parking_access.group_awtad_parking_admin,1,1,1,1
+access_maj_unit_admin,maj.unit admin,model_maj_unit,majodoul_parking_access.group_awtad_parking_admin,1,1,1,1
+access_maj_client_role_admin,maj.client.role admin,model_maj_client_role,majodoul_parking_access.group_awtad_parking_admin,1,1,1,1
+access_maj_client_role_assignment_admin,maj.client.role.assignment admin,model_maj_client_role_assignment,majodoul_parking_access.group_awtad_parking_admin,1,1,1,1
+access_maj_access_card_admin,maj.access.card admin,model_maj_access_card,majodoul_parking_access.group_awtad_parking_admin,1,1,1,1
+access_maj_parking_admin,maj.parking admin,model_maj_parking,majodoul_parking_access.group_awtad_parking_admin,1,1,1,1
+access_maj_state_log_admin,maj.state.log admin,model_maj_state_log,majodoul_parking_access.group_awtad_parking_admin,1,1,1,1
+access_maj_client_client_admin,maj.client client admin,model_maj_client,majodoul_parking_access.group_awtad_client_admin,1,0,0,0
+access_maj_unit_client_admin,maj.unit client admin,model_maj_unit,majodoul_parking_access.group_awtad_client_admin,1,0,0,0
+access_maj_client_role_client_admin,maj.client.role client admin,model_maj_client_role,majodoul_parking_access.group_awtad_client_admin,1,0,0,0
+access_maj_client_role_assignment_client_admin,maj.client.role.assignment client admin,model_maj_client_role_assignment,majodoul_parking_access.group_awtad_client_admin,1,1,1,0
+access_maj_access_card_client_admin,maj.access.card client admin,model_maj_access_card,majodoul_parking_access.group_awtad_client_admin,1,1,1,0
+access_maj_parking_client_admin,maj.parking client admin,model_maj_parking,majodoul_parking_access.group_awtad_client_admin,1,1,1,0
+access_maj_state_log_client_admin,maj.state.log client admin,model_maj_state_log,majodoul_parking_access.group_awtad_client_admin,1,0,0,0
+access_maj_client_security,maj.client security,model_maj_client,majodoul_parking_access.group_awtad_security_role,1,0,0,0
+access_maj_unit_security,maj.unit security,model_maj_unit,majodoul_parking_access.group_awtad_security_role,1,0,0,0
+access_maj_access_card_security,maj.access.card security,model_maj_access_card,majodoul_parking_access.group_awtad_security_role,1,0,0,0
+access_maj_parking_security,maj.parking security,model_maj_parking,majodoul_parking_access.group_awtad_security_role,1,1,0,0
+access_maj_state_log_security,maj.state.log security,model_maj_state_log,majodoul_parking_access.group_awtad_security_role,1,0,0,0

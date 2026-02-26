@@ -1,0 +1,48 @@
+<odoo>
+    <record id="view_maj_client_tree" model="ir.ui.view">
+        <field name="name">maj.client.tree</field>
+        <field name="model">maj.client</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="contact_name"/>
+                <field name="contact_email"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_maj_client_form" model="ir.ui.view">
+        <field name="name">maj.client.form</field>
+        <field name="model">maj.client</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="contact_name"/>
+                            <field name="contact_email"/>
+                            <field name="contact_mobile"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="unit_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_maj_client" model="ir.actions.act_window">
+        <field name="name">Clients</field>
+        <field name="res_model">maj.client</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
