@@ -1,0 +1,8 @@
+<odoo>
+    <record id="seq_real_estate_land" model="ir.sequence">
+        <field name="name">Real Estate Land</field>
+        <field name="code">real.estate.land</field>
+        <field name="prefix">LAND/%(year)s/</field>
+        <field name="padding">4</field>
+    </record>
+</odoo>

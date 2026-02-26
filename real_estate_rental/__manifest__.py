@@ -1,0 +1,1 @@
+{"name":"Real Estate Rental","version":"18.0.1.0.0","depends":["real_estate_units","account"],"data":["security/ir.model.access.csv","data/cron.xml","views/rental_views.xml"],"installable":True}
