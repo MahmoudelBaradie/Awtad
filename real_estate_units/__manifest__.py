@@ -1,0 +1,1 @@
+{"name":"Real Estate Units","version":"18.0.1.0.0","depends":["real_estate_project_wip"],"data":["security/ir.model.access.csv","views/unit_views.xml"],"installable":True}

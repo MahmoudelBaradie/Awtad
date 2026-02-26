@@ -1,0 +1,1 @@
+{"name":"Real Estate Reports","version":"18.0.1.0.0","depends":["real_estate_sales","real_estate_rental","real_estate_procurement","real_estate_property"],"data":["views/report_menu.xml"],"installable":True}
