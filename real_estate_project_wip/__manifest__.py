@@ -1,0 +1,1 @@
+{"name":"Real Estate Project WIP","version":"18.0.1.0.0","depends":["real_estate_land"],"data":["security/ir.model.access.csv","views/project_views.xml"],"installable":True}
