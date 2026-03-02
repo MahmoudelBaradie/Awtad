@@ -1,0 +1,1 @@
+{"name":"Real Estate Property Assets","version":"19.0.1.0.0","depends":["real_estate_units"],"data":["security/ir.model.access.csv","views/property_views.xml"],"installable":True}

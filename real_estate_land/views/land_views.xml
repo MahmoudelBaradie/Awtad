@@ -1,0 +1,18 @@
+<odoo>
+    <record id="view_real_estate_land_tree" model="ir.ui.view">
+        <field name="name">real.estate.land.tree</field>
+        <field name="model">real.estate.land</field>
+        <field name="arch" type="xml"><list><field name="name"/><field name="location"/><field name="total_land_cost"/><field name="state"/></list></field>
+    </record>
+    <record id="view_real_estate_land_form" model="ir.ui.view">
+        <field name="name">real.estate.land.form</field>
+        <field name="model">real.estate.land</field>
+        <field name="arch" type="xml"><form><header>
+            <button name="action_confirm" type="object" string="Confirm" invisible="state != 'draft'" class="btn-primary"/>
+            <button name="action_capitalize" type="object" string="Capitalize" invisible="state != 'confirmed'"/>
+            <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,capitalized"/>
+        </header><sheet><group><field name="name" readonly="1"/><field name="date"/><field name="location"/><field name="area"/><field name="area_uom"/><field name="area_sqm"/><field name="purchase_price"/><field name="additional_cost"/><field name="total_land_cost"/><field name="payment_account_id"/></group></sheet></form></field>
+    </record>
+    <record id="action_real_estate_land" model="ir.actions.act_window"><field name="name">Land Acquisitions</field><field name="res_model">real.estate.land</field><field name="view_mode">list,form</field></record>
+    <menuitem id="menu_real_estate_land" name="Land" parent="real_estate_core.menu_real_estate_root" action="action_real_estate_land"/>
+</odoo>
